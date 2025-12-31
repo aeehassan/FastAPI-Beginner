@@ -100,9 +100,9 @@ def update_item(item_id: int, item: UpdateItem):
     if item_id not in inventory:
         return "It doesn't exist"
 
-    if item.name != None:
+    if item.name != None:  # noqa: E711
         inventory[item_id].name = item.name
-    if item.price != None:
+    if item.price != None:  # noqa: E711
         inventory[item_id].price = item.price
 
     return inventory[item_id]
